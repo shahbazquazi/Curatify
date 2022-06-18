@@ -1,0 +1,47 @@
+
+.container {
+    color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    z-index: +1;
+
+}
+
+.heading {
+    font: 600 2rem 'Roboto Mono';
+    margin-bottom: 2rem;
+
+}
+
+.homeBlogsContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid gray;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 1rem;
+    
+}
+
+.homeBlogsContainer:hover {
+    border-color: red;
+}
+
+.title {
+    font: 400 1rem "Roboto Mono";
+    text-align: center;
+    margin: 1rem;
+}
+
+.description {
+    font: 200 1rem cursive;
+    margin: 1rem;
+    text-align: center;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
