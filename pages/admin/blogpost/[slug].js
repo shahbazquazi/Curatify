@@ -1,6 +1,6 @@
 import React from 'react';
 import {useRouter} from 'next/router';
-import BlogPost from '../../components/blog/BlogPost';
+import AdminBlogPost from '../../../components/admin/AdminBlogPost';
 
 function slug() {
   
@@ -8,7 +8,7 @@ function slug() {
     const {slug} = router.query;
   return (
     <>
-    <BlogPost/>
+    <AdminBlogPost/>
     </>
   )
 }

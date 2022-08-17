@@ -2,6 +2,7 @@ import Head from "next/head";
 import LatestBlog from "../components/blog/LatestBlog";
 import { useEffect, useState } from "react";
 import { HiArrowNarrowDown } from "react-icons/hi";
+import Footer from "../components/layout/Footer";
 
 export default function Home() {
 
@@ -34,7 +35,9 @@ export default function Home() {
       <img src="/meter.jpg" className="absolute opacity-30" />
       
       <LatestBlog />
+
       
+      <Footer/>
     </div>
   );
 }

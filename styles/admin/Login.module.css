@@ -1,0 +1,117 @@
+.loginContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url('/admin_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.loginBox {
+    margin: auto;
+    margin-top: 5rem;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.loginBox h2 {
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    font: 600 1.5rem 'Roboto-mono';
+}
+
+.loginForm { 
+    margin: 2rem; 
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.loginForm > div > svg {
+    color: white;
+    position: absolute;
+    font-size: 1.5rem;
+    transform: translate( 1.3rem, 1rem);
+    z-index: +1;
+}
+
+.loginForm > div > input {
+    padding: 1rem 4rem;
+    color: white;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border: 1px solid white;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.loginbtn {
+    color: white;
+    width: 20%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+
+.loginbtn:hover {
+    border-color: red;
+}
+
+.linkDiv {
+   display: flex;
+   flex-direction: column;
+}
+
+.forgetLink {
+    color: white;
+    width: 50%;
+    margin: 1rem;
+}
+
+.createLink {
+    color: white;
+    width: 50%;
+    margin-left: 1rem;
+}
+
+.createLink:hover{
+    color: red;
+}
+
+.forgetLink:hover {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .loginBox {
+        width: 80%;
+        height: 80%;
+    }
+     .createLink {
+        color: white;
+        width: 60%;
+    }
+    .forgetLink {
+        color: white;
+        width: 60%;
+    }
+    .loginbtn {
+        color: white;
+        width: 30%;
+        margin: auto;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        border: 2px solid white;
+        border-radius: 2rem;
+        opacity: 0.8;
+    }
+}

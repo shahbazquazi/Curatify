@@ -15,7 +15,7 @@ function Navbar() {
             <Link href="/"><li className="cursor-pointer hover:text-red-600">Home</li></Link>
             <Link href="/about"><li className="cursor-pointer hover:text-red-600">About</li></Link>
             <Link href="/contact"><li className="cursor-pointer hover:text-red-600">Contact</li></Link>
-            <Link href="/blog"><li className="cursor-pointer hover:text-red-600">Blog</li></Link>
+            <Link href="/blogs"><li className="cursor-pointer hover:text-red-600">Blogs</li></Link>
           </ul>
         </div>
       </nav>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/blog/Blog.module.css';
-import HomeBlogs from './HomeBlogs';
+import Blog from './Blog';
 import Link from "next/link";
 
 
@@ -10,12 +10,12 @@ function latestBlog() {
     <div className={styles.container}>
         <h2 className={styles.heading}>Latest Blogs</h2>
        <div className={styles.BlogList}>
-        <HomeBlogs/>
-        <HomeBlogs/>
-        <HomeBlogs/>
-        <HomeBlogs/>
+        <Blog/>
+        <Blog/>
+        <Blog/>
+        <Blog/>
        </div>
-      <Link href="#"><a className="text-red-600 font-semibold hover:text-white">For More Blogs</a></Link>
+     <Link href="/blog"><a className='absolute text-red-600 hover:text-white'>More Blogs</a></Link>
     </div>
     </>
   )

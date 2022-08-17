@@ -2,10 +2,10 @@ import React from "react";
 import styles from "../../styles/blog/Blog.module.css";
 import Link from "next/link";
 
-function HomeBlogs() {
+function Blog() {
   return (
     <>
-      <Link href="#">
+      <Link href="/blogpost/[slug].js">
         <a className={styles.homeBlogsContainer}>
           <h3 className={styles.title}>Title</h3>
           <p className={styles.description}>
@@ -17,4 +17,4 @@ function HomeBlogs() {
   );
 }
 
-export default HomeBlogs;
+export default Blog;

@@ -1,9 +1,11 @@
 
 .container {
+    position: relative;
     color: white;
     width: 80%;
     margin: auto;
     margin-top: 5rem;
+    margin-bottom: 2rem;
     z-index: +1;
 
 }
@@ -32,7 +34,7 @@
 .title {
     font: 400 1rem "Roboto Mono";
     text-align: center;
-    margin: 1rem;
+    margin: 1.25rem;
 }
 
 .description {
