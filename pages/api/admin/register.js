@@ -1,4 +1,4 @@
-import createBlogger from "../../../models/bloggerModel";
+import Blogger from "../../../models/bloggerModel";
 import connectMongo from "../../../utils/connectDb";
 import sendToken from "../../../utils/jwtToken";
 
@@ -18,7 +18,7 @@ export default async function register(req, res) {
       const { name, email, password } = req.body;
 
       //create blogger
-      const blogger = await createBlogger.create({
+      const blogger = await Blogger.create({
         name,
         email,
         password,

@@ -2,7 +2,7 @@ import nextConnect from "next-connect";
 import upload from "../../../../middleware/multer";
 import cloudinary from "cloudinary";
 import Protected from "../../../../middleware/Protected";
-import createBlog from "../../../../models/blogModel";
+import Blog from "../../../../models/blogModel";
 
 export const config = {
   api: {
@@ -45,7 +45,7 @@ const handler = nextConnect({
 		name: req.user.name
 	  }
       //create new blog
-      const blog = await createBlog.create(req.body);
+      const blog = await Blog.create(req.body);
       res.status(201).json({
         success: true,
         blog,

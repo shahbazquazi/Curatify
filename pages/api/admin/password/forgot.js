@@ -1,5 +1,5 @@
 import connectMongo from "../../../../utils/connectDb";
-import createBlogger from "../../../../models/bloggerModel";
+import Blogger from "../../../../models/bloggerModel";
 import sendEmail from "../../../../utils/sendEmail";
 
 export default async function forgotPassword(req, res) {
@@ -7,7 +7,7 @@ export default async function forgotPassword(req, res) {
 
   const { email } = req.body;
 
-  const blogger = await createBlogger.findOne({ email });
+  const blogger = await Blogger.findOne({ email });
 
   if (!blogger) {
     res.status(404).json({ error: "Blogger not found" });

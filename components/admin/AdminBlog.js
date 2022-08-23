@@ -1,20 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/blog/Blog.module.css";
 import Link from "next/link";
 
 function AdminBlog() {
+
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const getBlogs = async () => {
+      const rawResponse = await fetch(`/api/admin/blog/fetchall`, {
+        method: "GET",
+      });
+    
+      const response = await rawResponse.json();
+
+      if(response.success) {
+        setBlogs(response.blogs);
+      }
+    }
+    getBlogs();
+  }, [])
+  
+
   return (
+    
     <>
-      <Link href="/admin/blogpost/[slug].js">
+    {blogs.map((blog)=>{
+      return (
+        <Link key={blog._id} href={`/admin/blogpost/${blog.title.replace(/\s/g, '+')}`}>
         <a className={styles.homeBlogsContainer}>
-          <h3 className={styles.title}>Title</h3>
+          <div className={styles.blogSection}>
+          <div className= {styles.leftSection}>
+             <img className={styles.image} src={blog.image[0].url} alt="No image found" />
+          </div>
+          <div className={styles.rightSection}>
+          <h3 className={styles.title}>{blog.title}</h3>
           <p className={styles.description}>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, sit. Praesentium accusantium ea aperiam, commodi quasi cupiditate sed eaque, asperiores eius id dolore eos ex suscipit, laborum impedit officiis dicta.
+            {blog.description}
           </p>
+          </div>
+          </div>
         </a>
       </Link>
+      )
+
+    })}
+      
     </>
   );
 }
+
 
 export default AdminBlog;

@@ -67,6 +67,6 @@ bloggerSchema.methods.getResetPasswordToken = function (){
     return resetToken;
 };
 
-const createBlogger = models.bloggers || model('bloggers', bloggerSchema);
+const Blogger = models.bloggers || model('bloggers', bloggerSchema);
 
-export default createBlogger;
+export default Blogger;

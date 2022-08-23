@@ -42,6 +42,6 @@ const blogSchema = new Schema({
     }
 })
 
-const createBlog = models.blogs || model('blogs', blogSchema);
+const Blog = models.blogs || model('blogs', blogSchema);
 
-export default createBlog;
+export default Blog;

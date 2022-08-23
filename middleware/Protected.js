@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import createBlogger from "../models/bloggerModel";
+import Blogger from "../models/bloggerModel";
 
 export default function Protected(handler) {
   return async (req, res) => {
@@ -13,7 +13,7 @@ export default function Protected(handler) {
       // if we have token then
       const verifyToken = jwt.verify(Token, process.env.JWT_SECRET);
 
-      const currentUser = await createBlogger.findById(verifyToken.id);
+      const currentUser = await Blogger.findById(verifyToken.id);
 
       if (!currentUser) {
         return res.status(401).json({ error: "Token is invalid" });

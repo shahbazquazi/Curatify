@@ -1,4 +1,4 @@
-import createBlogger from "../../../models/bloggerModel";
+import Blogger from "../../../models/bloggerModel";
 import connectMongo from "../../../utils/connectDb";
 import sendToken from "../../../utils/jwtToken";
 
@@ -23,7 +23,7 @@ export default async function login (req, res) {
             return ;
         }
 
-        const blogger = await createBlogger.findOne({email}).select('+password');
+        const blogger = await Blogger.findOne({email}).select('+password');
 
         if(!blogger) {
             res.status(401).json({

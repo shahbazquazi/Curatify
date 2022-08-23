@@ -1,4 +1,4 @@
-import createBlogger from "../../../../../models/bloggerModel";
+import Blogger from "../../../../../models/bloggerModel";
 import sendToken from "../../../../../utils/jwtToken";
 import * as crypto from 'crypto';
 
@@ -10,7 +10,7 @@ export default async function resetPassword(req, res) {
      //Hash the token
      const resetPasswordToken =  crypto.createHash("sha256").update(resetToken).digest("hex");
      //Find the user with the token
-     const blogger = await createBlogger.findOne({
+     const blogger = await Blogger.findOne({
          resetPasswordToken,
          resetPasswordExpire: { $gt: Date.now() }
         });

@@ -9,6 +9,23 @@
     z-index: +1;
 
 }
+.blogSection {
+   display: flex;
+}
+
+.leftSection {
+   width: 20%;
+}
+
+.rightSection {
+   width: 80%;
+}
+
+.image {
+    width: 100%;
+    height: 142px;
+   margin: auto;
+}
 
 .heading {
     font: 600 2rem 'Roboto Mono';
@@ -32,9 +49,10 @@
 }
 
 .title {
-    font: 400 1rem "Roboto Mono";
+    font: 400 1.2rem "Roboto Mono";
     text-align: center;
     margin: 1.25rem;
+    margin-left: 0rem;
 }
 
 .description {

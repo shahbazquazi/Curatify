@@ -41,13 +41,6 @@ function Home() {
         <h2 className={styles.heading}>My Blogs</h2>
        <div className={styles.BlogList}>
         <AdminBlog/>
-        <AdminBlog/>
-        <AdminBlog/>
-        <AdminBlog/>
-        <AdminBlog/>
-        <AdminBlog/>
-        <AdminBlog/>
-        <AdminBlog/>
        </div>
        </div>
        </div>
