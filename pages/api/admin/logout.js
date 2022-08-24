@@ -23,6 +23,7 @@ const logout = async (req, res) => {
       });
       res.setHeader("Set-Cookie", serialized);
       res.status(201).json({
+        success: true,
         message: "Logged Out Successfully",
       });
     }
