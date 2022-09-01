@@ -64,7 +64,7 @@ function Home() {
         <div className="ml-5 mb-3">
           Welcome <span className="text-red-600">{bloggerName}</span>
           <span
-            className="absolute right-3 text-red-600 hover:text-white cursor-pointer"
+            className="absolute right-3 p-1 text-red-600 hover:text-black cursor-pointer bg-white rounded-lg"
             onClick={logoutHandle}
           >
             Logout

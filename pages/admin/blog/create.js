@@ -135,6 +135,7 @@ function Create() {
               ref={fileRef}
               accept="image/*"  
               onChange={imageHandler}
+              required
               />
            </div>
            <div className='flex items-center justify-center'>
