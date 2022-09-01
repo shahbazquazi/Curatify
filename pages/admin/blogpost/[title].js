@@ -61,8 +61,12 @@ function title(props) {
 }
 
 export async function getServerSideProps(context) {
+  
   const { title } = context.query;
-  const protocol = context.req.headers.referer.split("://")[0];
+  const protocol =
+  context.req.headers["x-forwarded-proto"] || context.req.connection.encrypted
+    ? "https"
+    : "http";
   const host = context.req.headers.host;
   const cookie = context.req.headers.cookie;
 

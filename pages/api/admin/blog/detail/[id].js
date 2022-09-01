@@ -14,12 +14,8 @@ const fetchDetails = nextConnect({
       const query = req.query;
       const { id } = query;
 
-      console.log(id);
-
       const blog = await Blog.findById(id);
 
-      console.log(blog);
-      
       res.status(200).json({
           success: true,
           blog
