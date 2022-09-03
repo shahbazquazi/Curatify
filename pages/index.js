@@ -36,8 +36,9 @@ export default function Home() {
       
       <LatestBlog />
 
-      
-      <Footer/>
+      <div className="absolute right-1/3 mt-20">
+      <Footer/> 
+      </div>
     </div>
   );
 }

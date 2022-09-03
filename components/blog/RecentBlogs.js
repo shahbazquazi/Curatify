@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/blog/Blog.module.css";
 import Link from "next/link";
 
-function Blog() {
+function RecentBlogs() {
 
   const [blogs , setBlogs] = useState([]);
 
@@ -14,6 +14,7 @@ function Blog() {
     
       const response = await rawResponse.json();
 
+
       if(response.success) {
         setBlogs(response.blogs);
       }
@@ -24,7 +25,7 @@ function Blog() {
 
   return (
     <>
-    {blogs.map((blog)=>{
+    {blogs.slice(0,5).map((blog)=>{
       return (
         <Link key={blog._id} href={`/blogpost/${blog.title.replace(/\s/g, '+')}`}>
         <a className={styles.homeBlogsContainer}>
@@ -50,4 +51,4 @@ function Blog() {
 }
 
 
-export default Blog;
+export default RecentBlogs;

@@ -8,6 +8,9 @@ function Create() {
 
   const fileRef = useRef(null);
 
+   //disable button
+   const [disable, setDisable] = useState(false);
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [content, setContent] = useState("");
@@ -23,6 +26,8 @@ function Create() {
 
   const submitHandler = async (e)=> {
     e.preventDefault();
+
+    setDisable(true);
 
     const myForm = new FormData();
     myForm.set("title", title);
@@ -139,7 +144,7 @@ function Create() {
               />
            </div>
            <div className='flex items-center justify-center'>
-           <button className='bg-red-600 text-white my-4 mb-10 px-12 py-4 w-4/5 rounded-md translate-x-3 hover:bg-red-400' type='submit'>Create</button>
+           <button className='bg-red-600 text-white my-4 mb-10 px-12 py-4 w-4/5 rounded-md translate-x-3 hover:bg-red-400' type='submit' disabled={disable}>Create</button>
            </div>
         </form>
        </div>
