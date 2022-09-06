@@ -18,8 +18,6 @@ const getblogs = nextConnect({
   
       const blogs = await Blog.find().sort({createdAt:-1});
 
-      console.log(blogs);
-
       res.status(200).json({
         success: true,
         blogs,
