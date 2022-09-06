@@ -1,30 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../../styles/blog/Blog.module.css";
 import Link from "next/link";
 
-function Blog() {
-
-  const [blogs , setBlogs] = useState([]);
-
-  useEffect(() => {
-    const getBlogs = async () => {
-      const rawResponse = await fetch(`/api/user/allblogs`, {
-        method: "GET",
-      });
-    
-      const response = await rawResponse.json();
-
-      if(response.success) {
-        setBlogs(response.blogs);
-      }
-    }
-    getBlogs();
-  }, [])
-  
+function Blog({blogs}) {
 
   return (
     <>
-    {blogs.map((blog)=>{
+    {blogs && blogs.map((blog)=>{
       return (
         <Link key={blog._id} href={`/blogpost/${blog.title.replace(/\s/g, '+')}`}>
         <a className={styles.homeBlogsContainer}>

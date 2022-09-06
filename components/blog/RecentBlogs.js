@@ -4,25 +4,29 @@ import Link from "next/link";
 
 function RecentBlogs() {
 
-  const [blogs , setBlogs] = useState([]);
+  const [blogs, setblogs] = useState([]);
+
 
   useEffect(() => {
-    const getBlogs = async () => {
-      const rawResponse = await fetch(`/api/user/allblogs`, {
-        method: "GET",
-      });
+    const getblogs = async () => {
+      
+      const rawResponse = await fetch(
+        `/api/user/getblogs`,
+        {
+          method: "GET",
+        }
+      );
     
       const response = await rawResponse.json();
-
-
+    
       if(response.success) {
-        setBlogs(response.blogs);
+        setblogs(response.blogs);
       }
     }
-    getBlogs();
+    getblogs();
   }, [])
   
-
+  
   return (
     <>
     {blogs.slice(0,5).map((blog)=>{
@@ -49,6 +53,5 @@ function RecentBlogs() {
     </>
   );
 }
-
 
 export default RecentBlogs;

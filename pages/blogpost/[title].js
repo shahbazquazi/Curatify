@@ -1,8 +1,8 @@
 import React from "react";
 
 function title(props) {
+  
   const blog = props.response.blog[0];
-
 
   return (
     <>

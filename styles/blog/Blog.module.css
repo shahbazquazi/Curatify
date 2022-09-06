@@ -29,7 +29,7 @@
 
 .heading {
     font: 600 2rem 'Roboto Mono';
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
 }
 
@@ -63,5 +63,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+
+
+
 
 
