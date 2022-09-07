@@ -6,9 +6,6 @@ import { MdShield } from "react-icons/md";
 import Router from "next/router";
 
 
-
-
-
 function resetToken() {
 
     const router = useRouter();
