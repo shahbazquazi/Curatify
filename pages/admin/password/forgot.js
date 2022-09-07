@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 import Router from "next/router";
 
 
-function forgot() {
+function Forgot() {
   const [email, setEmail] = useState("");
 
   const forgotSubmit = async (e) => {
@@ -82,4 +82,4 @@ function forgot() {
   );
 }
 
-export default forgot;
+export default Forgot;
