@@ -3,7 +3,7 @@ import Blog from "../components/blog/Blog";
 import styles from "../styles/blog/Blog.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-function blogs({data}) {
+function Blogs({data}) {
   const [page, setPage] = useState(1);
   const [blogs, setBlogs] = useState([]);
   const [hasMore, setHasMore] = useState(true);
@@ -70,4 +70,4 @@ export async function getServerSideProps(context) {
   return { props: { data } };
 }
 
-export default blogs;
+export default Blogs;

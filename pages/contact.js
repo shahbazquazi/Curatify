@@ -3,7 +3,7 @@ import { FaFacebook, FaWhatsapp, FaInstagram, FaTwitter } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function contact() {
+function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -125,4 +125,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;
