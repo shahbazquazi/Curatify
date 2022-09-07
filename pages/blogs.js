@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Blog from "../components/blog/Blog";
 import styles from "../styles/blog/Blog.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { compareSync } from "bcryptjs";
 
 function blogs({data}) {
   const [page, setPage] = useState(1);

@@ -29,7 +29,7 @@ function RecentBlogs() {
   
   return (
     <>
-    {blogs.slice(0,5).map((blog)=>{
+    {blogs.slice(0,3).map((blog)=>{
       return (
         <Link key={blog._id} href={`/blogpost/${blog.title.replace(/\s/g, '+')}`}>
         <a className={styles.homeBlogsContainer}>
