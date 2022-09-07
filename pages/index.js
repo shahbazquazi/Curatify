@@ -38,11 +38,11 @@ export default function Home() {
 
       <div className="relative">
         <img src="/meter.jpg" className="w-screen h-screen opacity-30" />
-        <div className="absolute top-52 left-72 text-white w-1/2">
-          <h1 className="font-bold text-3xl text-center">Welcome To Curatify</h1>
-          <p className="mt-5 text-base">
+        <div className="absolute top-36 left-72 text-white w-1/2">
+          <h1 className="font-bold text-5xl text-center text-red-600">Welcome To Curatify</h1>
+          <p className="mt-16 text-xl ">
             We are fond of cars like you and we love to give you the best review
-            of all the cars that we get to experience hands-on.
+            of all the cars that we get to experience hands-on. Read our latest blogs below.
           </p>
         </div>
       </div>
